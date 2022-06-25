@@ -6,6 +6,7 @@ import com.trendyol.order.api.model.Orders;
 import com.trendyol.order.api.repository.OrderRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
 @Service
@@ -14,7 +15,7 @@ public class OrderService {
 
     private final OrderRepository orderRepository;
 
-    @Transactional
+    @Transactional(propagation = Propagation.REQUIRED)
     public void saveOrder(OrderDto orderDto) {
 
         var order = Orders.builder()
