@@ -50,4 +50,84 @@
             <dropTable tableName="orders"/>
         </rollback>
     </changeSet>
+
+    <changeSet author="Emre ALTUN" id="insert_rows">
+
+        <insert tableName="orders">
+            <column name="user_name" value="Emre ALTUN"/>
+            <column name="seller_name" value="Apple"/>
+            <column name="status" value="Created"/>
+            <column name="category" value="Electronic"/>
+            <column name="product_code" value="PHN111"/>
+            <column name="product_name" value="IPhone 11"/>
+            <column name="price" value="11000"/>
+            <column name="quantity" value="1"/>
+        </insert>
+
+        <insert tableName="orders">
+            <column name="user_name" value="Zübeyir ERGÜN"/>
+            <column name="seller_name" value="Apple"/>
+            <column name="status" value="Delivered"/>
+            <column name="category" value="Electronic"/>
+            <column name="product_code" value="PHN222"/>
+            <column name="product_name" value="IPhone 12"/>
+            <column name="price" value="12000"/>
+            <column name="quantity" value="1"/>
+        </insert>
+
+        <insert tableName="orders">
+            <column name="user_name" value="Gizem TÜRMENEL"/>
+            <column name="seller_name" value="Apple"/>
+            <column name="status" value="Shipped"/>
+            <column name="category" value="Electronic"/>
+            <column name="product_code" value="PHNP222"/>
+            <column name="product_name" value="IPhone 12 Plus"/>
+            <column name="price" value="13000"/>
+            <column name="quantity" value="1"/>
+        </insert>
+
+        <insert tableName="orders">
+            <column name="user_name" value="Serhat KAYA"/>
+            <column name="seller_name" value="Apple"/>
+            <column name="status" value="Cancelled"/>
+            <column name="category" value="Electronic"/>
+            <column name="product_code" value="PHN333"/>
+            <column name="product_name" value="IPhone 13"/>
+            <column name="price" value="13000"/>
+            <column name="quantity" value="1"/>
+        </insert>
+
+        <insert tableName="orders">
+            <column name="user_name" value="Arda FAKILI"/>
+            <column name="seller_name" value="Apple"/>
+            <column name="status" value="Delivered"/>
+            <column name="category" value="Electronic"/>
+            <column name="product_code" value="PHN888"/>
+            <column name="product_name" value="IPhone 8"/>
+            <column name="price" value="8000"/>
+            <column name="quantity" value="1"/>
+        </insert>
+
+        <insert tableName="orders">
+            <column name="user_name" value="Emre ALTUN"/>
+            <column name="seller_name" value="Office Store"/>
+            <column name="status" value="Returned"/>
+            <column name="category" value="Office"/>
+            <column name="product_code" value="BC111"/>
+            <column name="product_name" value="Book Cover"/>
+            <column name="price" value="200"/>
+            <column name="quantity" value="1"/>
+        </insert>
+        <insert tableName="orders">
+            <column name="user_name" value="Emre ALTUN"/>
+            <column name="seller_name" value="Office Store"/>
+            <column name="status" value="Cancelled"/>
+            <column name="category" value="Office"/>
+            <column name="product_code" value="BC111"/>
+            <column name="product_name" value="Book Cover"/>
+            <column name="price" value="600"/>
+            <column name="quantity" value="3"/>
+        </insert>
+
+    </changeSet>
 </databaseChangeLog>
