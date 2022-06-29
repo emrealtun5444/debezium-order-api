@@ -21,7 +21,7 @@ curl --location --request PUT 'http://localhost:8083/connectors/order-connector/
     "transforms":"route",
     "transforms.route.type": "io.debezium.transforms.ContentBasedRouter",
     "transforms.route.language": "jsr223.groovy",
-    "transforms.route.topic.expression": "value.op == '\''d'\'' ? '\''public.order.deletes'\'' : null",
+    "transforms.route.topic.expression": "value.op == '\''d'\'' ? '\''debezium.order.deletes'\'' : null",
     "transforms.route.topic.regex": "(.*)order(.*)"
 
   }'

@@ -2,7 +2,7 @@
 package com.trendyol.order.api.model;
 
 import com.trendyol.order.api.common.model.AbstractEntity;
-import com.trendyol.order.api.dto.OrderDto;
+import com.trendyol.order.api.dto.OrderUpdateStateDto;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
@@ -37,15 +37,8 @@ public class Orders extends AbstractEntity {
 
     private Double price;
 
-    public void update(OrderDto orderDto) {
-        setUserName(orderDto.getUserName());
-        setSellerName(orderDto.getSellerName());
+    public void update(OrderUpdateStateDto orderDto) {
         setStatus(orderDto.getStatus());
-        setCategory(orderDto.getCategory());
-        setProductCode(orderDto.getProductCode());
-        setProductName(orderDto.getProductName());
-        setQuantity(orderDto.getQuantity());
-        setPrice(orderDto.getPrice());
     }
 
 

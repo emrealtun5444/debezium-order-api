@@ -1,6 +1,7 @@
 package com.trendyol.order.api.controller;
 
 import com.trendyol.order.api.dto.OrderDto;
+import com.trendyol.order.api.dto.OrderUpdateStateDto;
 import com.trendyol.order.api.service.OrderService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -30,8 +31,8 @@ public class OrderController {
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<Boolean> update(@PathVariable Long id, @RequestBody OrderDto orderDto) {
-        orderService.updateOrderStatus(id, orderDto);
+    public ResponseEntity<Boolean> update(@PathVariable Long id, @RequestBody OrderUpdateStateDto orderUpdateStateDto) {
+        orderService.updateOrderStatus(id, orderUpdateStateDto);
         return ResponseEntity.ok(true);
     }
 

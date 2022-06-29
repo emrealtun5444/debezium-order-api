@@ -24,7 +24,7 @@ curl --location --request POST 'http://localhost:8083/connectors' \
     "snapshot.select.statement.overrides":"public.orders",
     "snapshot.select.statement.overrides.public.orders": "SELECT * FROM public.orders WHERE status in ('\''Created'\'', '\''Shipped'\'', '\''Delivered'\'')",
 
-    "transforms": "filter,route",
+    "transforms": "filter",
     "transforms.filter.type": "io.debezium.transforms.Filter",
     "transforms.filter.language": "jsr223.groovy",
     "transforms.filter.condition": "value.after.status == '\''Created'\'' || value.after.status == '\''Shipped'\'' || value.after.status == '\''Delivered'\''",
